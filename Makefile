@@ -33,7 +33,7 @@ OBJS = \
 
 CLEANS += $(SONAME) $(LINKNAME)
 $(SONAME): $(OBJS)
-	$(CC) -shared -Wl,-soname,$(SONAME) -o $@ $^ -lc -ltcl
+	$(CC) -shared -Wl,-soname,$(SONAME) -o $@ $^ -lc -ltcl8.5
 	rm -f $(LINKNAME)
 	ln -s $(SONAME) $(LINKNAME)
 
