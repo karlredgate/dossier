@@ -1,0 +1,115 @@
+% vim:expandtab
+%
+%
+
+\ifx\pdfoutput\undefined
+\documentclass[twoside]{article}
+\else
+\documentclass[pdftex]{article}
+\usepackage{thumbpdf}
+\pdfcompresslevel=9
+\pdfinfo{
+   /Author (Karl N. Redgate)
+   /Title (Dossier Design)
+   /Subject (x86 BIOS/Physical Information Tools)
+}
+\fi
+
+\usepackage{fullpage}
+\usepackage{ifpdf}
+\usepackage{pdftricks}
+\usepackage{amssymb}
+% \begin{psinputs}
+% \usepackage{pstricks}
+% \usepackage[all,ps,dvips]{xy}
+% \usepackage{pst-node}
+% \usepackage{pst-tree}
+% \usepackage[dvips]{graphicx}
+% \end{psinputs}
+\usepackage{moreverb}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+% \usepackage{utopia}
+
+\usepackage[pdfcenterwindow=true,pdffitwindow=true,pdfmenubar=true,pdftoolbar=true,bookmarks=true,colorlinks=true]{hyperref}
+
+\newsavebox{\savepar}
+\newenvironment{boxit}{\begin{lrbox}{\savepar}\begin{minipage}[b]{6.5in}}
+{\end{minipage}\end{lrbox}\fbox{\usebox{\savepar}}}
+
+\newcommand{\vm}{\textsl{virtual machine}\/}
+\newcommand{\vms}{\textsl{virtual machines}\/}
+
+%\pagestyle{fancy}
+%\fancyfoot[LE,RO]{\thepage}
+%\fancyfoot[LO,RE]{Dossier}
+%\fancyfoot[CO,CE]{\copyright 2012 -- \textsf{Karl N. Redgate}}
+
+\parskip=\medskipamount
+
+\typeout{Copyright (c) 2012, Karl N. Redgate}
+
+
+\title{Dossier Design\\
+x86 BIOS/Physical Information Tools}
+\author{Karl N. Redgate}
+% \email{Karl.Redgate@stratus.com}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+
+% ==================================
+\section{Introduction}
+
+dossier generates xml as output - in an rdf format
+
+xml is validated with schematron to determine if it is
+acceptable/valid for use.
+
+If it is invalid use the previous version of the file.
+
+provide xslt translations to JSON like ohai,
+text like dmidecode, ruby objects, yaml
+
+set of command line tools to consume the xml and provide
+output for set of knowledge necessary for other tools
+that need the info
+
+These tools need to generate heuristic answers sometimes
+
+for example HP does not provide system product name, but
+dell only provides chassis product name
+
+tools need to check if xml source data is current
+
+need to pick up lspci information (others)
+
+
+\section{Config}
+
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{winsmbios}
+   Microsoft Corporation
+   \newblock {\em SMBIOS Support in Windows}.
+   \newblock {April 25, 2005}.
+   \newblock {http://msdn.microsoft.com/en-us/library/windows/hardware/gg463136.aspx}.
+
+% http://www.freescale.com/files/microcontrollers/doc/data_sheet/MC146818.pdf
+% 
+
+\end{thebibliography}
+
+\end{document}
+
+% vim:expandtab
+% vim:autoindent

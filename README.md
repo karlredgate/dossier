@@ -1,4 +1,4 @@
 dossier
 =======
 
-Tools to manage platform information.
+Tool set for gathering system infomation

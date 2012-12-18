@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smbios version="2.5">
+  <structure handle="0xda00" type="218">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xda01" type="218">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xda04" type="218">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xda05" type="218">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xda06" type="218">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xda07" type="218">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x0000" type="0">
+    <name>bios</name>
+    <fields>
+      <field>
+        <name>vendor</name>
+        <description>vendor</description>
+        <value>Dell Inc.</value>
+      </field>
+      <field>
+        <name>version</name>
+        <description>version</description>
+        <value>A04</value>
+      </field>
+      <field>
+        <name>release-date</name>
+        <description>release-date</description>
+        <value>04/30/2010</value>
+      </field>
+    </fields>
+    <strings count="3">
+      <s id="0">Dell Inc.</s>
+      <s id="1">A04</s>
+      <s id="2">04/30/2010</s>
+    </strings>
+  </structure>
+  <structure handle="0x0100" type="1">
+    <name>system</name>
+    <fields>
+      <field>
+        <name>manufacturer</name>
+        <description>manufacturer</description>
+        <value>Dell Inc.</value>
+      </field>
+      <field>
+        <name>type</name>
+        <description>type</description>
+        <value>Unknown</value>
+      </field>
+      <field>
+        <name>version</name>
+        <description>version</description>
+        <value>(null)</value>
+      </field>
+      <field>
+        <name>serial-number</name>
+        <description>serial-number</description>
+        <value>5CL0KN1</value>
+      </field>
+      <field>
+        <name>asset-tag</name>
+        <description>asset-tag</description>
+        <value>(null)</value>
+      </field>
+      <field>
+        <name>product-name</name>
+        <description>product-name</description>
+        <value>OptiPlex 780                 </value>
+      </field>
+      <height>48</height>
+      <power-cords>181</power-cords>
+    </fields>
+    <strings count="3">
+      <s id="0">Dell Inc.</s>
+      <s id="1">OptiPlex 780                 </s>
+      <s id="2">5CL0KN1</s>
+    </strings>
+  </structure>
+  <structure handle="0x0200" type="2">
+    <name>baseboard</name>
+    <fields>
+      <field>
+        <name>manufacturer</name>
+        <description>manufacturer</description>
+        <value>Dell Inc.</value>
+      </field>
+      <field>
+        <name>product-name</name>
+        <description>product-name</description>
+        <value>0C27VV</value>
+      </field>
+      <field>
+        <name>serial-number</name>
+        <description>serial-number</description>
+        <value>..CN1374007G05KI.</value>
+      </field>
+      <field>
+        <name>version</name>
+        <description>version</description>
+        <value>A01</value>
+      </field>
+      <field>
+        <name>asset-tag</name>
+        <description>asset-tag</description>
+        <value>(null)</value>
+      </field>
+      <field>
+        <name>chassis-location</name>
+        <description>chassis-location</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="4">
+      <s id="0">Dell Inc.</s>
+      <s id="1">0C27VV</s>
+      <s id="2">A01</s>
+      <s id="3">..CN1374007G05KI.</s>
+    </strings>
+  </structure>
+  <structure handle="0x0300" type="3">
+    <name>chassis</name>
+    <fields>
+      <field>
+        <name>manufacturer</name>
+        <description>manufacturer</description>
+        <value>Dell Inc.</value>
+      </field>
+      <field>
+        <name>serial-number</name>
+        <description>serial-number</description>
+        <value>5CL0KN1</value>
+      </field>
+      <field>
+        <name>version</name>
+        <description>version</description>
+        <value>(null)</value>
+      </field>
+      <field>
+        <name>asset-tag</name>
+        <description>asset-tag</description>
+        <value>          </value>
+      </field>
+    </fields>
+    <strings count="4">
+      <s id="0">Dell Inc.</s>
+      <s id="1">5CL0KN1</s>
+      <s id="2">          </s>
+      <s id="3"> </s>
+    </strings>
+  </structure>
+  <structure handle="0x0400" type="4">
+    <name>processor</name>
+    <fields>
+      <field>
+        <name>socket-designation</name>
+        <description>socket-designation</description>
+        <value>CPU</value>
+      </field>
+      <field>
+        <name>manufacturer</name>
+        <description>manufacturer</description>
+        <value>Intel</value>
+      </field>
+      <field>
+        <name>version</name>
+        <description>version</description>
+        <value>(null)</value>
+      </field>
+      <field>
+        <name>serial-number</name>
+        <description>serial-number</description>
+        <value>(null)</value>
+      </field>
+      <field>
+        <name>asset-tag</name>
+        <description>asset-tag</description>
+        <value>(null)</value>
+      </field>
+      <field>
+        <name>part-number</name>
+        <description>part-number</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="2">
+      <s id="0">CPU</s>
+      <s id="1">Intel</s>
+    </strings>
+  </structure>
+  <structure handle="0x0700" type="7">
+    <name>cache</name>
+    <fields>
+      <field>
+        <name>system-cache-type</name>
+        <description>system-cache-type</description>
+        <value>Unified</value>
+      </field>
+    </fields>
+  </structure>
+  <structure handle="0x0701" type="7">
+    <name>cache</name>
+    <fields>
+      <field>
+        <name>system-cache-type</name>
+        <description>system-cache-type</description>
+        <value>Unified</value>
+      </field>
+    </fields>
+  </structure>
+  <structure handle="0x0800" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>PARALLEL</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">PARALLEL</s>
+    </strings>
+  </structure>
+  <structure handle="0x0801" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>SERIAL1</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">SERIAL1</s>
+    </strings>
+  </structure>
+  <structure handle="0x0802" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">SERIAL2</s>
+    </strings>
+  </structure>
+  <structure handle="0x0803" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">KYBD</s>
+    </strings>
+  </structure>
+  <structure handle="0x0804" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">MOUSE</s>
+    </strings>
+  </structure>
+  <structure handle="0x0805" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB1</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB1</s>
+    </strings>
+  </structure>
+  <structure handle="0x0806" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB2</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB2</s>
+    </strings>
+  </structure>
+  <structure handle="0x0807" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB3</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB3</s>
+    </strings>
+  </structure>
+  <structure handle="0x0808" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB4</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB4</s>
+    </strings>
+  </structure>
+  <structure handle="0x0809" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB5</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB5</s>
+    </strings>
+  </structure>
+  <structure handle="0x080a" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB6</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB6</s>
+    </strings>
+  </structure>
+  <structure handle="0x080b" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB7</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB7</s>
+    </strings>
+  </structure>
+  <structure handle="0x080c" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>USB8</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">USB8</s>
+    </strings>
+  </structure>
+  <structure handle="0x080d" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>ENET</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">ENET</s>
+    </strings>
+  </structure>
+  <structure handle="0x080e" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>MIC</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">MIC</s>
+    </strings>
+  </structure>
+  <structure handle="0x080f" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>LINE-OUT</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">LINE-OUT</s>
+    </strings>
+  </structure>
+  <structure handle="0x0810" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>LINE-IN</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">LINE-IN</s>
+    </strings>
+  </structure>
+  <structure handle="0x0811" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>HP-OUT</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">HP-OUT</s>
+    </strings>
+  </structure>
+  <structure handle="0x0812" type="8">
+    <name>port-connector</name>
+    <fields>
+      <field>
+        <name>internal-reference-designator</name>
+        <description>internal-reference-designator</description>
+        <value>MONITOR</value>
+      </field>
+      <field>
+        <name>external-reference-designator</name>
+        <description>external-reference-designator</description>
+        <value>(null)</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">MONITOR</s>
+    </strings>
+  </structure>
+  <structure handle="0x090a" type="9">
+    <name>system-slot</name>
+    <fields>
+      <field>
+        <name>designation</name>
+        <description>designation</description>
+        <value>SLOT1</value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">SLOT1</s>
+    </strings>
+  </structure>
+  <structure handle="0x0901" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">       </s>
+    </strings>
+  </structure>
+  <structure handle="0x0902" type="9">
+    <name>system-slot</name>
+    <fields>
+      <field>
+        <name>designation</name>
+        <description>designation</description>
+        <value>SLOT2  </value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">SLOT2  </s>
+    </strings>
+  </structure>
+  <structure handle="0x0903" type="9">
+    <name>system-slot</name>
+    <fields>
+      <field>
+        <name>designation</name>
+        <description>designation</description>
+        <value>SLOT3  </value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">SLOT3  </s>
+    </strings>
+  </structure>
+  <structure handle="0x0904" type="9">
+    <name>system-slot</name>
+    <fields>
+      <field>
+        <name>designation</name>
+        <description>designation</description>
+        <value>SLOT4  </value>
+      </field>
+    </fields>
+    <strings count="1">
+      <s id="0">SLOT4  </s>
+    </strings>
+  </structure>
+  <structure handle="0x0905" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">       </s>
+    </strings>
+  </structure>
+  <structure handle="0x0906" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">       </s>
+    </strings>
+  </structure>
+  <structure handle="0x0907" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">       </s>
+    </strings>
+  </structure>
+  <structure handle="0x0908" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">       </s>
+    </strings>
+  </structure>
+  <structure handle="0x0a00" type="10">
+    <name>onboard-devices</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">Intel Graphics Media Accelerator 950</s>
+    </strings>
+  </structure>
+  <structure handle="0x0a02" type="10">
+    <name>onboard-devices</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">Intel Gigabit Ethernet Controller</s>
+    </strings>
+  </structure>
+  <structure handle="0x0a03" type="10">
+    <name>onboard-devices</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">Intel(R) High Definition Audio Controller</s>
+    </strings>
+  </structure>
+  <structure handle="0x0b00" type="11">
+    <name>oem-strings</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">www.dell.com</s>
+    </strings>
+  </structure>
+  <structure handle="0x0d00" type="13">
+    <name>structure</name>
+    <fields>
+</fields>
+    <strings count="1">
+      <s id="0">en|US|iso8859-1</s>
+    </strings>
+  </structure>
+  <structure handle="0x0f00" type="15">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1000" type="16">
+    <name>physical-memory-array</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1100" type="17">
+    <name>memory-device</name>
+    <fields>
+      <total-width>64</total-width>
+      <data-width>64</data-width>
+      <field>
+        <name>form-factor</name>
+        <description>form-factor</description>
+        <value>DIMM</value>
+      </field>
+      <field>
+        <name>memory-type</name>
+        <description>memory-type</description>
+        <value>DDR3</value>
+      </field>
+    </fields>
+    <strings count="5">
+      <s id="0">DIMM_1</s>
+      <s id="1">0198000002FE    </s>
+      <s id="2">8D3259FA</s>
+      <s id="3">KP223C-ELD        </s>
+      <s id="4">05102900</s>
+    </strings>
+  </structure>
+  <structure handle="0x1101" type="17">
+    <name>memory-device</name>
+    <fields>
+      <total-width>64</total-width>
+      <data-width>64</data-width>
+      <field>
+        <name>form-factor</name>
+        <description>form-factor</description>
+        <value>DIMM</value>
+      </field>
+      <field>
+        <name>memory-type</name>
+        <description>memory-type</description>
+        <value>DDR3</value>
+      </field>
+    </fields>
+    <strings count="5">
+      <s id="0">DIMM_3</s>
+      <s id="1">0198000002FE    </s>
+      <s id="2">913244FB</s>
+      <s id="3">KP223C-ELD        </s>
+      <s id="4">05102900</s>
+    </strings>
+  </structure>
+  <structure handle="0x1102" type="17">
+    <name>memory-device</name>
+    <fields>
+      <total-width>64</total-width>
+      <data-width>64</data-width>
+      <field>
+        <name>form-factor</name>
+        <description>form-factor</description>
+        <value>DIMM</value>
+      </field>
+      <field>
+        <name>memory-type</name>
+        <description>memory-type</description>
+        <value>DDR3</value>
+      </field>
+    </fields>
+    <strings count="5">
+      <s id="0">DIMM_2</s>
+      <s id="1">0198000002FE    </s>
+      <s id="2">8F3254FA</s>
+      <s id="3">KP223C-ELD        </s>
+      <s id="4">05102900</s>
+    </strings>
+  </structure>
+  <structure handle="0x1103" type="17">
+    <name>memory-device</name>
+    <fields>
+      <total-width>64</total-width>
+      <data-width>64</data-width>
+      <field>
+        <name>form-factor</name>
+        <description>form-factor</description>
+        <value>DIMM</value>
+      </field>
+      <field>
+        <name>memory-type</name>
+        <description>memory-type</description>
+        <value>DDR3</value>
+      </field>
+    </fields>
+    <strings count="5">
+      <s id="0">DIMM_4</s>
+      <s id="1">0198000002FE    </s>
+      <s id="2">5F334841</s>
+      <s id="3">KP223C-ELD        </s>
+      <s id="4">05102900</s>
+    </strings>
+  </structure>
+  <structure handle="0x1300" type="19">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1400" type="20">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1401" type="20">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1402" type="20">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1403" type="20">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1410" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1800" type="24">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1900" type="25">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1b10" type="27">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1b11" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1b12" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1b13" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x1b14" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x2000" type="32">
+    <name>system-boot</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xb100" type="177">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x8100" type="129">
+    <name>structure</name>
+    <fields>
+</fields>
+    <strings count="2">
+      <s id="0">Intel_ASF</s>
+      <s id="1">Intel_ASF_001</s>
+    </strings>
+  </structure>
+  <structure handle="0x8200" type="130">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x8300" type="131">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x8800" type="136">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xd000" type="208">
+    <name>structure</name>
+    <fields>
+</fields>
+    <strings count="2">
+      <s id="0">20100817</s>
+      <s id="1">20100823</s>
+    </strings>
+  </structure>
+  <structure handle="0xd100" type="209">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xd200" type="210">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xd201" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xd400" type="212">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xd800" type="126">
+    <name>inactive</name>
+    <fields>
+</fields>
+    <strings count="2">
+      <s id="0">Intel Corp.</s>
+      <s id="1">    </s>
+    </strings>
+  </structure>
+  <structure handle="0xdd00" type="221">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xdd01" type="221">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xdd02" type="221">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0xde00" type="222">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+  <structure handle="0x7f00" type="127">
+    <name>structure</name>
+    <fields>
+</fields>
+  </structure>
+</smbios>

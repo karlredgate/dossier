@@ -1,0 +1,3 @@
+
+set SMBIOS::debug 10
+SMBIOS::Probe

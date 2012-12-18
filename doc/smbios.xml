@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smbios>
+
+    <structure type="0">
+        <name>bios</name>
+	<description>BIOS Information</description>
+	<className>BIOSInformation</className>
+	<fields>
+	    <field offset="0x04" length="BYTE" value="STRING">
+	        <name>vendor</name>
+		<description>BIOS Vendor</description>
+	        <fieldName>vendor</fieldName>
+	    </field>
+	    <field offset="0x05" length="BYTE" value="STRING">
+	        <name>bios-version</name>
+		<description>BIOS Version</description>
+	        <fieldName>version</fieldName>
+	    </field>
+	    <field offset="0x08" length="BYTE" value="STRING">
+	        <name>release-date</name>
+		<description>BIOS release date</description>
+	        <fieldName>release_date</fieldName>
+	    </field>
+	</fields>
+    </structure>
+
+</smbios>

@@ -5,9 +5,19 @@
 
 # Compiled Dynamic libraries
 *.so
+*.so.1
 *.dylib
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
+
+dossier
+dumpdmi
+# dmi.xml
+tests.log
+design.aux
+design.out
+design.log
+design.pdf
