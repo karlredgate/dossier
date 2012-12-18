@@ -3,3 +3,5 @@ compiler:
   - gcc
 # Change this to your needs
 script: make
+before_install:
+ - sudo apt-get install tcl tcl-devel
