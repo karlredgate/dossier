@@ -2,6 +2,8 @@ MAJOR_VERSION=1
 MINOR_VERSION=0
 REVISION=0
 
+# to handle travis-ci.org Ubuntu environment
+INCLUDES += -I/usr/include/tcl8.5
 CFLAGS += -fpic -g $(INCLUDES)
 CXXFLAGS += -fpic -g $(INCLUDES) 
 
