@@ -21,11 +21,11 @@ all: dossier dumpdmi
 
 CLEANS += dossier.o
 dossier: dossier.o $(SONAME)
-	$(CC) -o $@ $^ -ltcl -lstdc++
+	$(CC) -o $@ $^ -ltcl8.5 -lstdc++
 
 CLEANS += dumpdmi.o
 dumpdmi: dumpdmi.o $(SONAME)
-	$(CC) -o $@ $^ -ltcl -lstdc++
+	$(CC) -o $@ $^ -ltcl8.5 -lstdc++
 
 OBJS = \
 	smbios.o \
