@@ -1,3 +1,4 @@
+
 MAJOR_VERSION=1
 MINOR_VERSION=0
 REVISION=0
@@ -10,6 +11,8 @@ CXXFLAGS += -fpic -g $(INCLUDES)
 LINKNAME=libdossier.so
 SONAME=$(LINKNAME).$(MAJOR_VERSION)
 REALNAME=$(SONAME).$(MINOR_VERSION).$(REVISION)
+
+include $(shell uname)/Platform.mk
 
 default: build install
 kit: build test install
