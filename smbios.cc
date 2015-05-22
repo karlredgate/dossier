@@ -890,7 +890,7 @@ void SMBIOS::Header::probe( uint8_t *data ) {
     syslog( LOG_NOTICE, "SMBIOS version %u.%u", major_version, minor_version );
     if ( debug ) printf( "SMBIOS version %u.%u\n", major_version, minor_version );
 
-#pragma GCC diagnostic ignored "-Wint-to-pointer-cast"
+#pragma GCC diagnostic push ignored "-Wint-to-pointer-cast"
     dmi_address = (uint8_t *) *( (uint32_t*)(data + 0x18) );
 #pragma GCC diagnostic pop
     dmi_length  = *( (uint16_t*) (data + 0x16) );
