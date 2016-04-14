@@ -7,6 +7,7 @@ REVISION=0
 INCLUDES += -I/usr/include/tcl8.5
 CFLAGS += -fpic -g $(INCLUDES)
 CXXFLAGS += -fpic -g $(INCLUDES) 
+# LDFLAGS += -Wl,-dylib
 
 LINKNAME=libdossier.so
 SONAME=$(LINKNAME).$(MAJOR_VERSION)
