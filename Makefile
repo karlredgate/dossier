@@ -8,6 +8,7 @@ INCLUDES += -I/usr/include/tcl8.5
 CFLAGS += -fpic -g $(INCLUDES)
 CXXFLAGS += -fpic -g $(INCLUDES) 
 # LDFLAGS += -Wl,-dylib
+LDFLAGS += $( pkg-config --libs tcl )
 
 LINKNAME=libdossier.so
 SONAME=$(LINKNAME).$(MAJOR_VERSION)
@@ -25,11 +26,11 @@ all: dossier dumpdmi
 
 CLEANS += dossier.o
 dossier: dossier.o $(SONAME)
-	$(CC) -o $@ $^ -ltcl8.5 -lstdc++
+	$(CC) -o $@ $^ -lstdc++ $(LDFLAGS)
 
 CLEANS += dumpdmi.o
 dumpdmi: dumpdmi.o $(SONAME)
-	$(CC) -o $@ $^ -ltcl8.5 -lstdc++
+	$(CC) -o $@ $^ -lstdc++ $(LDFLAGS)
 
 OBJS = \
 	smbios.o \
@@ -37,7 +38,7 @@ OBJS = \
 
 CLEANS += $(SONAME) $(LINKNAME)
 $(SONAME): $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $^ -lc -ltcl8.5
+	$(CC) $(LDFLAGS) -o $@ $^ -lc
 	rm -f $(LINKNAME)
 	ln -s $(SONAME) $(LINKNAME)
 
