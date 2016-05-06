@@ -1,1 +1,1 @@
-LDFLAGS += -shared -Wl,-soname,$(SONAME)
+LDSOFLAGS += -shared -Wl,-soname,$(SONAME)
