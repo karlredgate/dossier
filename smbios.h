@@ -75,7 +75,6 @@ namespace SMBIOS {
         virtual void print_field( FILE *, const char *, const char * );
         virtual void print_field( FILE *, const char *, uint8_t );
 
-        virtual void print_field( FILE *, const char *, const char *, const char * );
         virtual void print_strings( FILE * );
     };
 

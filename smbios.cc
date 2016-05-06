@@ -241,16 +241,6 @@ void
 SMBIOS::Structure::print_field( FILE *f, const char *element, const char *value ) {
     const char *description = "ddd";
     fprintf( f, "<field><name>%s</name>\n", element );
-    fprintf( f, "<description>%s</description>\n", element );
-    fprintf( f, "<value>%s</value></field>\n", value );
-}
-
-/**
- */
-void
-SMBIOS::Structure::print_field( FILE *f, const char *element, const char *description, const char *value ) {
-    fprintf( f, "<field><name>%s</name>\n", element );
-    fprintf( f, "<description>%s</description>\n", description );
     fprintf( f, "<value>%s</value></field>\n", value );
 }
 
