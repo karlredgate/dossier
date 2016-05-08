@@ -1005,7 +1005,7 @@ SMBIOS::Header::print_xml( FILE *f ) {
 
     print_rdf_header( f );
 
-    fprintf( f, "<rdf:Description rdf:about='http://redgates.com/smbios/%s'>", system().uuid_string() );
+    fprintf( f, "<rdf:Description rdf:about='http://redgates.com/smbios/%s'>", system().uuid()->to_s() );
     fprintf( f, "<rdfs:label>SMBIOS</rdfs:label>" );
     fprintf( f, "<dc:version>%d.%d</dc:version>", major_version, minor_version );
     fprintf( f, "</rdf:Description>" );
