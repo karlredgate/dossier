@@ -135,7 +135,8 @@ namespace SMBIOS {
         const char *sku_number() const;
         const char *family() const;
         uint8_t * uuid_raw() const;
-        UUID *uuid();
+        GUID    * guid_raw() const;
+        UUID    * uuid();
     };
 
     /**

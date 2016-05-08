@@ -59,6 +59,13 @@ UUID::UUID( uint8_t *input ) {
 }
 
 /**
+ * Create a UUID from a 16 byte binary GUID.
+ */
+UUID::UUID( GUID *input ) {
+    set( input );
+}
+
+/**
  * The string is parsed from an ASCII UUID into its 16 bytes binary form.
  * After parsing, we reformat so the output is always lower case.
  */
@@ -78,6 +85,36 @@ UUID::set( char *input ) {
 bool
 UUID::set( uint8_t *input ) {
     memcpy( data, input, sizeof data );
+    format();
+    return true;
+}
+
+/**
+ */
+bool
+UUID::set( GUID *input ) {
+    uint8_t *raw = (uint8_t *)input;
+
+    data[0] = raw[3];
+    data[1] = raw[2];
+    data[2] = raw[1];
+    data[3] = raw[0];
+
+    data[4] = raw[5];
+    data[5] = raw[4];
+
+    data[6] = raw[7];
+    data[7] = raw[6];
+
+    data[8]  = raw[8];
+    data[9]  = raw[9];
+    data[10] = raw[10];
+    data[11] = raw[11];
+    data[12] = raw[12];
+    data[13] = raw[13];
+    data[14] = raw[14];
+    data[15] = raw[15];
+
     format();
     return true;
 }

@@ -349,9 +349,16 @@ SMBIOS::System::uuid_raw() const {
 
 /**
  */
+GUID *
+SMBIOS::System::guid_raw() const {
+    return (GUID *)( data + 8 );
+}
+
+/**
+ */
 UUID *
 SMBIOS::System::uuid() {
-    return new UUID( uuid_raw() );
+    return new UUID( guid_raw() );
 }
 
 /**

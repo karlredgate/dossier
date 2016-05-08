@@ -32,6 +32,13 @@
 #include <unistd.h>
 #include <tcl.h>
 
+struct GUID {
+    uint32_t data1;
+    uint16_t data2;
+    uint16_t data3;
+    uint8_t data4[8];
+};
+
 /**
  * Without an arguement, create a new UUID.
  *
@@ -49,8 +56,10 @@ public:
     UUID( UUID& );
     UUID();
     UUID( uint8_t * );
+    UUID( GUID * );
     UUID( char * );
     bool set( uint8_t * );
+    bool set( GUID * );
     bool set( char * );
     inline char *to_s() { return string; }
     inline uint8_t *raw() { return data; }
