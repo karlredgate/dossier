@@ -334,16 +334,16 @@ SMBIOS::System::System( void *address )
 
 /**
  */
-const char * SMBIOS::System::manufacturer()  const { return string(0x4); }
-const char * SMBIOS::System::product_name()  const { return string(0x5); }
-const char * SMBIOS::System::serial_number() const { return string(0x7); }
-const char * SMBIOS::System::sku_number()    const { return string(0x19); }
-const char * SMBIOS::System::family()        const { return string(0x1A); }
+const char * SMBIOS::System::manufacturer()  const { return string(0x4); } // version 2.0
+const char * SMBIOS::System::product_name()  const { return string(0x5); } // version 2.0
+const char * SMBIOS::System::serial_number() const { return string(0x7); } // version 2.0
+const char * SMBIOS::System::sku_number()    const { return string(0x19); } // Version 2.4
+const char * SMBIOS::System::family()        const { return string(0x1A); } // Version 2.4
 
 /**
  */
 uint8_t *
-SMBIOS::System::uuid_string() const {
+SMBIOS::System::uuid_raw() const {
     return data + 8;
 }
 
@@ -351,7 +351,7 @@ SMBIOS::System::uuid_string() const {
  */
 UUID *
 SMBIOS::System::uuid() {
-    return new UUID( uuid_string() );
+    return new UUID( uuid_raw() );
 }
 
 /**
