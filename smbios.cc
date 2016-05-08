@@ -49,6 +49,40 @@ namespace {
     static StructureFactory factories[MAX_FACTORY];
     static const char *unknown = "UNKNOWN";
     int debug = 0;
+
+    /**
+     */
+    void
+    print_rdf_header( FILE *f ) {
+        fprintf( f, "<?xml version='1.0' encoding='UTF-8'?>\n" );
+        fprintf( f, "<rdf:RDF " );
+        fprintf( f, "xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' " );
+        fprintf( f, "xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#' " );
+        fprintf( f, "xmlns:dc='http://purl.org/dc/elements/1.1/' " );
+        fprintf( f, "xmlns:dcterms='http://purl.org/dc/terms/' " );
+        fprintf( f, "xmlns:smbios='http://redgates.com/smbios/1.0/'>" );
+    }
+
+    /**
+     */
+    void
+    print_rdf_trailer( FILE *f ) {
+        fprintf( f, "</rdf:RDF>" );
+    }
+
+    /**
+     */
+    void
+    print_field_rdf( FILE *f, const char *element, const char *value ) {
+        fprintf( f, "<smbios:%s>%s</smbios:%s>", element, value, element );
+    }
+
+    /**
+     */
+    void
+    print_field_rdf( FILE *f, const char *element, uint8_t value ) {
+        fprintf( f, "<smbios:%s>%d</smbios:%s>", element, value, element );
+    }
 }
 
 namespace SMBIOS {
@@ -200,6 +234,13 @@ SMBIOS::Structure::word_at( int offset ) const {
  */
 void
 SMBIOS::Structure::print_xml( FILE *f ) {
+    fprintf( f, "<smbios:%s>", structure_name() );
+    fprintf( f, "<smbios:structure-handle rdf:value='0x%04x' />", handle );
+    fprintf( f, "<smbios:structure-type rdf:value='%d' />", structure_type );
+    print_fields( f );
+    fprintf( f, "</smbios:%s>", structure_name() );
+
+#if 0
     fprintf( f, "<structure handle='0x%04x' type='%d'>\n", handle, structure_type );
     fprintf( f, "<name>%s</name>", structure_name() );
     fprintf( f, "<fields>\n" );
@@ -207,6 +248,7 @@ SMBIOS::Structure::print_xml( FILE *f ) {
     fprintf( f, "</fields>\n" );
     print_strings( f );
     fprintf( f, "</structure>\n" );
+#endif
 }
 
 /**
@@ -239,16 +281,14 @@ SMBIOS::Structure::print_fields( FILE *f ) {
  */
 void
 SMBIOS::Structure::print_field( FILE *f, const char *element, const char *value ) {
-    fprintf( f, "<field><name>%s</name>\n", element );
-    fprintf( f, "<value>%s</value></field>\n", value );
+    print_field_rdf( f, element, value );
 }
 
 /**
  */
 void
 SMBIOS::Structure::print_field( FILE *f, const char *element, uint8_t value ) {
-    fprintf( f, "<field><name>%s</name>\n", element );
-    fprintf( f, "<value>%d</value></field>\n", value );
+    print_field_rdf( f, element, value );
 }
 
 /**
@@ -962,10 +1002,17 @@ found_smbios:
 void
 SMBIOS::Header::print_xml( FILE *f ) {
     if ( table == NULL ) return;
-    fprintf( f, "<?xml version='1.0' encoding='UTF-8'?>\n" );
-    fprintf( f, "<smbios version='%d.%d'>\n", major_version, minor_version );
+
+    print_rdf_header( f );
+
+    fprintf( f, "<rdf:Description rdf:about='http://redgates.com/smbios/%s'>", system().uuid_string() );
+    fprintf( f, "<rdfs:label>SMBIOS</rdfs:label>" );
+    fprintf( f, "<dc:version>%d.%d</dc:version>", major_version, minor_version );
+    fprintf( f, "</rdf:Description>" );
+
     table->print_xml( f );
-    fprintf( f, "</smbios>\n" );
+
+    print_rdf_trailer( f );
 }
 
 /**
