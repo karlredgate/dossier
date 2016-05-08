@@ -337,6 +337,8 @@ SMBIOS::System::System( void *address )
 const char * SMBIOS::System::manufacturer()  const { return string(0x4); }
 const char * SMBIOS::System::product_name()  const { return string(0x5); }
 const char * SMBIOS::System::serial_number() const { return string(0x7); }
+const char * SMBIOS::System::sku_number()    const { return string(0x19); }
+const char * SMBIOS::System::family()        const { return string(0x1A); }
 
 /**
  */
@@ -367,6 +369,8 @@ SMBIOS::System::print_fields( FILE *f ) {
     print_field( f, "type", SystemTypeName[type_id()] );
     print_field( f, "version", string(0x6) );
     print_field( f, "serial-number", serial_number() );
+    print_field( f, "sku-number", sku_number() );
+    print_field( f, "family", family() );
     print_field( f, "asset-tag", string(0x8) );
     print_field( f, "product-name", product_name() );
 
