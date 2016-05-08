@@ -4,4 +4,4 @@ compiler:
 # Change this to your needs
 script: make
 before_install:
- - sudo apt-get install tcl8.6 tcl8.6-dev
+ - sudo apt-get install tcl tcl-dev
