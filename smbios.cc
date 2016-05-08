@@ -368,6 +368,36 @@ SMBIOS::System::type_id() const {
     return data[0x5] & 0x7F;
 }
 
+namespace {
+
+    const char * const WakeUpTypeName[] = {
+        "Reserved",
+        "Other",
+        "Unknown",
+        "APM Timer",
+        "Modem Ring",
+        "LAN Remote",
+        "Power Switch",
+        "PCI PME#",
+        "AC Power Restored"
+    };
+
+}
+
+/**
+ */
+const char *
+SMBIOS::System::wake_up_type() const {
+    uint8_t index = data[0x18];
+
+    if ( index > 0x8 ) {
+        return "OUT OF SPEC";
+    }
+
+    return WakeUpTypeName[index];
+}
+
+
 /**
  */
 void
@@ -380,6 +410,7 @@ SMBIOS::System::print_fields( FILE *f ) {
     print_field( f, "family", family() );
     print_field( f, "asset-tag", string(0x8) );
     print_field( f, "product-name", product_name() );
+    print_field( f, "wake-up-type", wake_up_type() );
 
     uint8_t height = data[0x11];
     if ( height != 0 )  print_field( f, "height", height );

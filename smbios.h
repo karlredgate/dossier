@@ -137,6 +137,8 @@ namespace SMBIOS {
         uint8_t * uuid_raw() const;
         GUID    * guid_raw() const;
         UUID    * uuid();
+
+        const char * wake_up_type() const;
     };
 
     /**
