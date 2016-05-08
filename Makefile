@@ -3,15 +3,10 @@ MAJOR_VERSION=1
 MINOR_VERSION=0
 REVISION=0
 
-# to handle travis-ci.org Ubuntu environment
-# move this to a Ubuntu makefile?
-# INCLUDES += -I/usr/include/tcl8.5
-CXXFLAGS += $(shell pkg-config --cflags tcl )
-CFLAGS += -fpic -g $(INCLUDES)
-CXXFLAGS += -fpic -g $(INCLUDES) 
+CFLAGS += -fpic -g
+CXXFLAGS += -fpic -g
 # LDFLAGS += -Wl,-dylib
 LDFLAGS += -g
-LDFLAGS += $(shell pkg-config --libs tcl )
 
 LINKNAME=libdossier.so
 SONAME=$(LINKNAME).$(MAJOR_VERSION)
