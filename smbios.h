@@ -163,6 +163,7 @@ namespace SMBIOS {
         const char *  serial_number()    const;
         const char *  asset_tag()        const;
         const char *  chassis_location() const;
+        const char *  board_type()       const;
         uint8_t features()         const;
         uint8_t type_id()          const;
     };

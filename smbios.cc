@@ -443,6 +443,40 @@ const char *  SMBIOS::BaseBoard::chassis_location() const { return string(0xA); 
 uint8_t SMBIOS::BaseBoard::features()         const { return data[0x9]; }
 uint8_t SMBIOS::BaseBoard::type_id()          const { return data[0xD]; }
 
+namespace {
+
+    const char * const BaseBoardType[] = {
+        "OUT OF SPEC",
+        "Unknown",
+        "Other",
+        "Server Blade",
+        "Connectivity Switch",
+        "System Management Module",
+        "Processor Module",
+        "I/O Module",
+        "Memory Module",
+        "Daughter board",
+        "Motherboard (includes processor, memory, and I/O)",
+        "Processor/Memory Module",
+        "Processor/IO Module",
+        "Interconnect board"
+    };
+
+}
+
+/**
+ */
+const char *
+SMBIOS::BaseBoard::board_type() const {
+    uint8_t index = data[0xD];
+
+    if ( index > 0xD ) {
+        return "OUT OF SPEC";
+    }
+
+    return BaseBoardType[index];
+}
+
 /**
  */
 void
@@ -453,6 +487,7 @@ SMBIOS::BaseBoard::print_fields( FILE *f ) {
     print_field( f, "version", version() );
     print_field( f, "asset-tag", asset_tag() );
     print_field( f, "chassis-location", chassis_location() );
+    print_field( f, "board-type", board_type() );
 }
 
 /**
