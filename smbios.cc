@@ -83,6 +83,8 @@ namespace {
     print_field_rdf( FILE *f, const char *element, uint8_t value ) {
         fprintf( f, "<smbios:%s>%d</smbios:%s>", element, value, element );
     }
+
+    static const char * OUT_OF_SPEC = "OUT OF SPEC";
 }
 
 namespace SMBIOS {
@@ -388,10 +390,14 @@ namespace {
  */
 const char *
 SMBIOS::System::wake_up_type() const {
+    if ( 0x18 > header_length ) {
+        return OUT_OF_SPEC;
+    }
+
     uint8_t index = data[0x18];
 
     if ( index > 0x8 ) {
-        return "OUT OF SPEC";
+        return OUT_OF_SPEC;
     }
 
     return WakeUpTypeName[index];
@@ -471,7 +477,7 @@ SMBIOS::BaseBoard::board_type() const {
     uint8_t index = data[0xD];
 
     if ( index > 0xD ) {
-        return "OUT OF SPEC";
+        return OUT_OF_SPEC;
     }
 
     return BaseBoardType[index];
@@ -686,7 +692,7 @@ SMBIOS::Cache::system_cache_type() const {
     uint8_t index = data[0x11];
 
     if ( index > 0x5 ) {
-        return "OUT OF SPEC";
+        return OUT_OF_SPEC;
     }
 
     return SystemCacheTypeName[index];
