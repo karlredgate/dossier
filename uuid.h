@@ -71,7 +71,4 @@ extern bool UUID_Initialize( Tcl_Interp * );
 
 #endif
 
-/*
- * vim:autoindent
- * vim:expandtab
- */
+/* vim: set autoindent expandtab sw=4 : */

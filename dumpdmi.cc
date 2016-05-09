@@ -56,7 +56,4 @@ int main( int argc, char **argv ) {
     return 0;
 }
 
-/*
- * vim:autoindent
- * vim:expandtab
- */
+/* vim: set autoindent expandtab sw=4 : */

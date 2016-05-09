@@ -20,7 +20,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-/** \file house.cc
+/** \file dossier.cc
  * \brief A unit test/diagnostic shell for these libraries
  *
  * \todo add "service" status
@@ -174,7 +174,7 @@ devno_cmd( ClientData data, Tcl_Interp *interp,
 
 /**
  */
-int House_Init( Tcl_Interp *interp ) {
+int Dossier_Init( Tcl_Interp *interp ) {
     int interactive = 1;
     Tcl_Obj *interactive_obj;
     interactive_obj = Tcl_GetVar2Ex( interp, "tcl_interactive", NULL, TCL_GLOBAL_ONLY );
@@ -188,8 +188,8 @@ int House_Init( Tcl_Interp *interp ) {
         return false;
     }
 
-    if ( interactive ) printf( " ** House debug tool v1.0\n" );
-    Tcl_SetVar(interp, "tcl_rcFileName", "~/.houserc", TCL_GLOBAL_ONLY);
+    if ( interactive ) printf( " ** Dossier debug tool v1.0\n" );
+    Tcl_SetVar(interp, "tcl_rcFileName", "~/.dossierrc", TCL_GLOBAL_ONLY);
 
     Tcl_EvalEx( interp, "proc clock {command} { namespace eval ::tcl::clock $command}", -1, TCL_EVAL_GLOBAL );
     Tcl_EvalEx( interp, "proc commands {} {namespace eval commands {info procs}}", -1, TCL_EVAL_GLOBAL );
@@ -219,10 +219,7 @@ int House_Init( Tcl_Interp *interp ) {
 /**
  */
 int main( int argc, char **argv ) {
-    Tcl_Main( argc, argv, House_Init );
+    Tcl_Main( argc, argv, Dossier_Init );
 }
 
-/*
- * vim:autoindent
- * vim:expandtab
- */
+/* vim: set autoindent expandtab sw=4 : */
