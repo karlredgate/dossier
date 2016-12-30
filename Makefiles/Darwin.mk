@@ -27,7 +27,8 @@ distro_test: release_test
 distro_clean: release_clean
 	@echo Generic Darwin clean
 
-VERSION := $(shell sw_vers -productVersion)
-include Makefiles/Darwin$(VERSION).mk
+# VERSION := $(shell sw_vers -productVersion)
+# include Makefiles/Darwin$(VERSION).mk
 
+# For now do not include codename makefile, since it is included by release file
 include $(wildcard Makefiles/$(DISTRO).mk Makefiles/Darwin$(RELEASE).mk )

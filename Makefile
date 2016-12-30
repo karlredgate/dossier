@@ -1,8 +1,14 @@
 
+PACKAGE = dossier
+PWD := $(shell pwd)
+DEPENDENCIES = tcl
+
 MAJOR_VERSION=1
 MINOR_VERSION=0
 REVISION=0
 
+
+# migrate this to platform
 CFLAGS += -fpic -g
 CXXFLAGS += -fpic -g
 # LDFLAGS += -Wl,-dylib
@@ -12,9 +18,12 @@ LINKNAME=libdossier.so
 SONAME=$(LINKNAME).$(MAJOR_VERSION)
 REALNAME=$(SONAME).$(MINOR_VERSION).$(REVISION)
 
-include $(shell uname)/Platform.mk
 
 default: build install
+
+OS := $(shell uname -s)
+include Makefiles/$(OS).mk
+
 kit: build test install
 build: $(UTILTARGET) all test
 
