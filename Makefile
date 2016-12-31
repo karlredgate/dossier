@@ -10,14 +10,11 @@ REVISION=0
 
 # migrate this to platform
 CFLAGS += -fpic -g
-CXXFLAGS += -fpic -g
+CXXFLAGS += -fpic -g -H
 # LDFLAGS += -Wl,-dylib
 LDFLAGS += -g
 
-LINKNAME=libdossier.so
-SONAME=$(LINKNAME).$(MAJOR_VERSION)
-REALNAME=$(SONAME).$(MINOR_VERSION).$(REVISION)
-
+LIBRARY_NAME = libdossier
 
 default: build install
 
@@ -32,22 +29,22 @@ all: dossier dumpdmi
 	# $(MAKE) -C src
 
 CLEANS += dossier.o
-dossier: dossier.o $(SONAME)
-	$(CXX) -o $@ $^ -lstdc++ $(LDFLAGS)
+dossier: dossier.o $(LIBRARY_TARGET)
+	$(CXX) -o $@ $^ -lstdc++ $(LDFLAGS) -ltcl
 
 CLEANS += dumpdmi.o
-dumpdmi: dumpdmi.o $(SONAME)
-	$(CXX) -o $@ $^ -lstdc++ $(LDFLAGS)
+dumpdmi: dumpdmi.o $(LIBRARY_TARGET)
+	$(CXX) -o $@ $^ -lstdc++ $(LDFLAGS) -ltcl
 
 OBJS = \
 	smbios.o \
 	uuid.o
 
-CLEANS += $(SONAME) $(LINKNAME)
-$(SONAME): $(OBJS)
-	$(CXX) $(LDSOFLAGS) -o $@ $^ -lc $(LDFLAGS)
-	rm -f $(LINKNAME)
-	ln -s $(SONAME) $(LINKNAME)
+CLEANS += $(LIBRARY_TARGET) $(LINKNAME)
+$(LIBRARY_TARGET): $(OBJS)
+	$(CXX) $(SHARED_LIB_FLAGS) -o $@ $^ -lc $(LDFLAGS) -ltcl
+	: rm -f $(LINKNAME)
+	: ln -s $(LIBRARY_TARGET) $(LINKNAME)
 
 smbios.o :: smbios.h
 uuid.o :: uuid.h
