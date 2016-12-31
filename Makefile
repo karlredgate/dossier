@@ -10,7 +10,7 @@ REVISION=0
 
 # migrate this to platform
 CFLAGS += -fpic -g
-CXXFLAGS += -fpic -g -H
+CXXFLAGS += -fpic -g
 # LDFLAGS += -Wl,-dylib
 LDFLAGS += -g
 
@@ -20,6 +20,7 @@ default: build install
 
 OS := $(shell uname -s)
 include Makefiles/$(OS).mk
+CXXFLAGS += -I$(OS)
 
 kit: build test install
 build: $(UTILTARGET) all test

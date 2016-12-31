@@ -41,7 +41,8 @@
 #include <pthread.h>
 #include <string.h>
 #include <syslog.h>
-#include <tcl.h>
+
+#include "platform.h"
 
 #include "uuid.h"
 #include "smbios.h"
